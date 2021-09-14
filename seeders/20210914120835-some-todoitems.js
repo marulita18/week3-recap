@@ -7,7 +7,7 @@ module.exports = {
         task: "Learn to cook",
         deadline: "November",
         important: true,
-        todoListId: 1,
+        todoListId: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -15,7 +15,7 @@ module.exports = {
         task: "Learn to code",
         deadline: "October",
         important: true,
-        todoListId: 2,
+        todoListId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -32,6 +32,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
+    return await queryInterface.bulkDelete("todoItems", null, {});
     /**
      * Add commands to revert seed here.
      *
