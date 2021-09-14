@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   todolist.init(
     {
       name: DataTypes.STRING,
-      important: DataTypes.BOOLEAN,
     },
     {
       sequelize,
