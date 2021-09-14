@@ -8,12 +8,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      todolist.belongsTo(models.user);
       // define association here
     }
   }
   todolist.init(
     {
       name: DataTypes.STRING,
+      userId: DataTypes.NUMBER,
     },
     {
       sequelize,
